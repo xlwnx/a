@@ -1,0 +1,23 @@
+# mount point       fstype    device                                                                flags
+/boot             emmc      /dev/block/by-name/boot               flags=backup=1;flashimg=1;display="Boot"
+/recovery         emmc      /dev/block/by-name/recovery           flags=backup=1;flashimg=1;display="Recovery"
+/cache            ext4      /dev/block/by-name/cache              flags=backup=1;display="Cache"
+/efs              ext4      /dev/block/by-name/sec_efs            flags=backup=1;display="EFS"
+/sec_efs          ext4      /dev/block/by-name/sec_efs            flags=backup=1;subpartitionof=/efs
+/carrier          ext4      /dev/block/by-name/carrier            flags=backup=1;display="Carrier"
+/preload          ext4      /dev/block/by-name/hidden             flags=backup=1;display="Preload"
+/modem            emmc      /dev/block/by-name/radio              flags=backup=1;display="Baseband"
+/misc             emmc      /dev/block/by-name/misc               flags=backup=1;display="Misc"
+/keydata          ext4      /dev/block/by-name/keydata            flags=backup=1;display="Keydata"
+/keyrefuge        f2fs      /dev/block/by-name/keyrefuge          flags=backup=1;display="Keyrefuge"
+/dtbo             emmc      /dev/block/by-name/dtbo               flags=backup=1;display="Dtbo";flashimg=1
+/prism            ext4      /dev/block/by-name/prism              flags=backup=1;display="Prism"
+/optics           ext4      /dev/block/by-name/optics             flags=backup=1;display="Optics"
+/vbmeta_system    emmc      /dev/block/by-name/vbmeta_system      flags=backup=1;display="Vbmeta System";flashimg=1
+/vendor_boot      emmc      /dev/block/by-name/vendor_boot        flags=backup=1;display="Vendor Boot";flashimg=1
+/vbmeta_samsung   emmc      /dev/block/by-name/vbmeta_samsung     flags=backup=1;display="Vbmeta Samsung";flashimg=1
+/init_boot        emmc      /dev/block/by-name/init_boot          flags=backup=1;display="Init Boot";flashimg=1
+
+# Removable storage
+/external_sd      vfat      /dev/block/mmcblk0p1 /dev/block/mmcblk0   flags=storage;wipeingui;removable
+/usb-otg          vfat      /dev/block/sde1      /dev/block/sde       flags=display="USB-OTG";storage;wipeingui;removable
