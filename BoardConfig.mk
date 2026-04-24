@@ -96,3 +96,11 @@ TW_INCLUDE_REPACKTOOLS := true
 # Hack for missing modules
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
+# Graphics / Screen flickering fixes
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_UI_BLANK_UNBLANK_ON_INIT := true
+
+# Fix Recovery Bootloop / Crashing
+TW_NO_BIND_SYSTEM := true
+TW_NO_LEGACY_PROPS := true
